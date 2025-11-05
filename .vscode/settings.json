@@ -2,6 +2,12 @@
     "terminal.integrated.env.windows": {
         "PYTHONPATH": "${workspaceFolder}/utils"
     },
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}/utils"
+    },
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}/utils"
+    },
     "python.analysis.extraPaths": [
         "${workspaceFolder}/utils"
     ]
