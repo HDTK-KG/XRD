@@ -51,7 +51,7 @@ def ras2csv(ras_filepath):
         ras_filepath (str): RASファイルのパス
         
     Returns:
-        pandas.DataFrame: theta2, intensity, timeの列を持つDataFrame
+        pandas.DataFrame: two_theta, intensity, timeの列を持つDataFrame
     """
     data_lines = []
     
@@ -74,16 +74,16 @@ def ras2csv(ras_filepath):
             parts = line.split()
             if len(parts) >= 3:
                 try:
-                    theta2 = float(parts[0])
+                    two_theta = float(parts[0])
                     intensity = float(parts[1])
                     time = float(parts[2])
-                    data_lines.append([theta2, intensity, time])
+                    data_lines.append([two_theta, intensity, time])
                 except ValueError:
                     # 数値に変換できない行はスキップ
                     continue
     
     # DataFrameを作成
-    df = pd.DataFrame(data_lines, columns=['theta2', 'intensity', 'time'])
+    df = pd.DataFrame(data_lines, columns=['two_theta', 'intensity', 'time'])
     return df
 
 

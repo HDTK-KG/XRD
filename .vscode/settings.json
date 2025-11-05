@@ -1,2 +1,6 @@
 {
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}/utils"
+    },
+    "python.analysis.extraPaths": ["${workspaceFolder}/utils"]
 }
